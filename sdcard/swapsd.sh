@@ -1,4 +1,5 @@
 #!/bin/ash
+## Mediatek Forums https://labs.mediatek.com/forums/forums/show/73.page . Autor: sonnyyu
 opkg update
 opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 opkg install e2fsprogs fdisk swap-utils
