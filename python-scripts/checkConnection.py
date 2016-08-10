@@ -3,9 +3,11 @@ import subprocess
 ## Jaime Rodrigo
 ## Panama Hitek www.panamahitek.com
 ## checkConnectionV1
-## Revisa el estado actual de la conexión a Internet. Si luego de la cantidad de reintentos sigue fallando, entonces deshabilita la primera red
-## (que se asume es el modo de estacion) y deja habilitado la segunda (modo AP).
-#Variables globales
+## Revisa el estado actual de la conexión a Internet. Si luego de la cantidad de reintentos sigue fallando, 
+##entonces deshabilita la primera red (que se asume es el modo de estacion) y deja habilitado la segunda (modo AP).
+###################################################################################################################
+
+# Variables globales
 filename = "/usr/python-scripts/data.txt" #No modificar. Archivo a guardar los estados
 site = "www.google.com" #Sitio utilizado para revisar la conexion a Internet
 reset_network = 2   #Cantidad de veces que va a intentar reconectarse.
