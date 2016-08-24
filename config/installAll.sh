@@ -1,4 +1,4 @@
-#!/bin/sh /etc/rc.common
+#!/bin/ash
 MYSQL_PW = "99012016"
 PHP_PORT = "81"
 PHP_DOMAIN = "myDomain"
