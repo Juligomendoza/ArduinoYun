@@ -1,7 +1,7 @@
 #!/bin/ash
-MYSQL_PW = "99012016"
-PHP_PORT = "81"
-PHP_DOMAIN = "myDomain"
+MYSQL_PW="99012016"
+PHP_PORT="81"
+PHP_DOMAIN="myDomain"
 opkg update
 opkg install apache
 sed -i 's,Listen.*,Listen $PHP_PORT,g' /etc/apache/httpd.conf
