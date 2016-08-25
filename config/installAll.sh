@@ -35,7 +35,7 @@ chmod 777 apache
 mv apache /etc/init.d/
 /etc/init.d/apache start
 /etc/init.d/apache enable
-opkg install nano && openssh-sftp-server
+opkg install nano openssh-sftp-server
 echo "INSTALACION DE LAMP COMPLETA."
 echo "Panama Hitek"
 echo "Jaime Rodrigo"
