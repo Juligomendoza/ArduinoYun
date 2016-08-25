@@ -30,6 +30,8 @@ mysql_install_db --force
 /etc/init.d/mysqld start
 /etc/init.d/mysqld enable
 mysqladmin -u root password $MYSQL_PW
+wget -O apache https://raw.githubusercontent.com/PanamaHitek/ArduinoYun/master/config/apache
+chmod 777 apache
 mv apache /etc/init.d/
 /etc/init.d/apache start
 /etc/init.d/apache enable
