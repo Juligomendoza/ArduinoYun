@@ -17,10 +17,10 @@ ln -s /usr/bin/php-cgi /usr/share/cgi-bin/
 echo -e '<Directory "/usr/share/cgi-bin">\n    AllowOverride None\n    Options FollowSymLinks\n    Order allow,deny\n    Allow from all\n</Directory>\n\n<Directory "/usr/bin">\n    AllowOverride None\n    Options none\n    Order allow,deny\n    Allow from all\n</Directory>' >> /etc/apache/httpd.conf
 sed -i 's,doc_root.*,doc_root = "",g' /etc/php.ini
 apachectl restart
-opkg update
 opkg install libpthread libncurses libreadline mysql-server
-mkdir -p /mnt/data/mysql
-mkdir -p /mnt/data/tmp
+sed -i 's,^datadir.*,datadir         = "/srv/mysql",g' /etc/my.cnf
+sed -i 's,^tmpdir.*,tmpdir          = "/tmp",g' /etc/my.cnf
+mkdir -p /srv/mysql
 mysql_install_db --force
 /etc/init.d/mysqld start
 /etc/init.d/mysqld enable
